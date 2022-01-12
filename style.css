@@ -295,3 +295,113 @@ p {
 .etc {
   padding: 20px;
 }
+
+/*work*/
+
+.work__categories {
+  margin: 40px;
+}
+
+.category__btn {
+  border: 1px solid var(--color-dark-white);
+  border-radius: var(--size-border-radius);
+  fonr-size: var(--font-regular);
+  padding: 8px 48px;
+}
+
+.category__btn.active,
+.category__btn:hover {
+  background-color: var(--color-pink);
+  color: var(--color-white);
+}
+
+.category__btn.active .category__count,
+.category__btn:hover .category__count {
+  opacity: 1;
+  top: 0px;
+  /*active상태에서의 count와
+  hover상태의 count니까 쉼표사용 노노~
+  https://developer.mozilla.org/ko/docs/Web/CSS/:active*/
+}
+
+.category__count {
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  color: var(--color-white);
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  display: inline-block;
+  /*inline태그는 inline-block으로 바꾸어줘야 적용됨
+  span태그는 전체 콘텐츠를 꽉 감싸주는 형태*/
+  position: relative;
+  top: -20px;
+  left: 4px;
+  opacity: 0;
+  transition: all var(--animation-duration);
+}
+
+.work__projects {
+  display: flex;
+  flex-wrap: wrap;
+  /*flex-wrap은 flex아이템의 줄 바꿈 설정
+  https://www.tabmode.com/homepage/flex-wrap.html*/
+  justify-content: center;
+}
+
+.project {
+  position: relative;
+  width: 280px;
+  height: 250px;
+  margin: 2px;
+  background-color: var(--color-light-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project__img {
+  max-width: 100%;
+  max-height: 100%;
+  /*이미지가 최대로 커질 수 있는 사이즈를 지정
+  부모 컨테이너의 사이즈를 가져옴!*/
+}
+
+.project:hover .project__description {
+  opacity: 0.8;
+  transform: translateY(0px);
+}
+
+.project__description {
+  position: absolute;
+  color: var(--color-white);
+  background-color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  /*flex item들이 행으로 나열됨*/
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all var(--animation-duration);
+  transform: translateY(10px);
+  /*translate를 사용하면 X, Y축으로 움직이기 가능*/
+}
+
+.project__description h3 {
+  color: var(--color-white);
+}
+
+.project__description h3::after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 50%;
+  width: 25px;
+  height: 2px;
+  margin-left: -12px;
+  margin-top: 8px;
+  background-color: var(--color-white);
+}
