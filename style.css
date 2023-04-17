@@ -76,8 +76,8 @@
   font-weight: var(--weight-bold);
   margin: 24px;
   padding: 8px 12px;
-  border: 2px solid var(--color-grey);
-  color: var(--color-grey);
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
 }
 
 .home__container h1, .home__container h2{
@@ -373,9 +373,11 @@
   margin-right: 40px;
   /*odd는 홀수, even은 짝수
   nth-child는 CSS셀렉터 */
+  margin-top: 20px;
 }
 .testimonial__avatar:nth-child(even) {
   margin-left: 40px;
+  margin-top: 40px;
 }
 
 .testimonial__speech-bubble {
@@ -388,6 +390,7 @@
   color: var(--color-light-grey);
 }
 
+.testimonial__speech-bubble span,
 .testimonial__speech-bubble a {
   color: var(--color-blue);
 }
