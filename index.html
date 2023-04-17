@@ -10,12 +10,13 @@
         content="Project for world-renowned software engineer heim" />
     <meta
         name="author"
-        content="heim" />
-    <link rel="icon" type="image/png" href="imgs/favicon.jpg" />
+        content="Victoria Park" />
+    <link rel="icon" type="image/png" href="imgs/logo.png" />
     <script
-        src="https://kit.fontawesome.com/9befce0679.js"
+        src="https://kit.fontawesome.com/7b45ff2637.js"
         crossorigin="anonymous">
     </script>
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
@@ -24,18 +25,16 @@
     <nav id="navbar">
         <div class="navbar__logo">
             <img src="imgs/logo.png" alt="logo">
-            <a href="#">Heim</a>
+            <a href="#">Victoria Park</a>
         </div>
-        <div class="navbar__menu">
-            <ul class="navbar__menu">
-                <li class="navbar__menu__item active">Home</li>
-                <li class="navbar__menu__item">About</li>
-                <li class="navbar__menu__item">Skills</li>
-                <li class="navbar__menu__item">My work</li>
-                <li class="navbar__menu__item">Testimonials</li>
-                <li class="navbar__menu__item">Contact</li>
-            </ul>
-        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__menu__item active" data-link="#home">Home</li>
+            <li class="navbar__menu__item" data-link="#about">About</li>
+            <li class="navbar__menu__item" data-link="#skills">Skills</li>
+            <li class="navbar__menu__item" data-link="#work">My work</li>
+            <li class="navbar__menu__item" data-link="#testimonials">Testimonials</li>
+            <li class="navbar__menu__item" data-link="#contact">Contact</li>
+        </ul>
         <!--Toggle button-->
         <button class="navbar__toggle-btn">
             <i class="fas fa-bars"></i>
@@ -44,10 +43,12 @@
 
     <!--Home--> 
     <section id="home">
-        <img src="imgs/heim.jpg" alt="Heim's profile photo" class="home__avatar"/>
-        <h1 class="home__title"> Hello, <br /> I'm Dream Coder.</h1>
-        <h2 class="home__description">A illustrator</h2>
-        <button class="home__contact">Contact Me</button>
+        <div class="home__container">
+            <img src="imgs/hyerim.jpg" alt="Heim's profile photo" class="home__avatar"/>
+            <h1 class="home__title"> Hello, <br /> I'm Dream Coder.</h1>
+            <h2 class="home__description">I'm at the Victoria Park in Auckland</h2>
+            <button class="home__contact">Contact Me</button>
+        </div>
     </section>
 
     <!--About-->
@@ -200,16 +201,16 @@
             <h1>My work</h1>
             <h3>Projects</h3>
             <div class="work__categories">
-                <button class="category__btn active">
+                <button class="category__btn selected" data-filter="*">
                     All<span class="category__count">8</span>
                 </button>
-                <button class="category__btn">
+                <button class="category__btn" data-filter="Front-end">
                     Front-end<span class="category__count">8</span>
                 </button>
-                <button class="category__btn">
-                    Contents<span class="category__count">8</span>
+                <button class="category__btn" data-filter="Graphic design">
+                    Graphic design<span class="category__count">8</span>
                 </button>
-                <button class="category__btn">
+                <button class="category__btn" data-filter="Illustrator">
                     Illustrator<span class="category__count">8</span>
                 </button>
             </div>
@@ -218,6 +219,7 @@
                     href="#"
                     class="project"
                     target="blank"
+                    data-type="Front-end"
                 >
                     <img class="project__img" src="imgs/navbar.png" alt="project">
                     <div class="project__description">
@@ -229,6 +231,7 @@
                     href="#"
                     class="project"
                     target="blank"
+                    data-type="Front-end"
                 >
                     <img class="project__img" src="imgs/navbar.png" alt="project">
                     <div class="project__description">
@@ -240,6 +243,7 @@
                     href="#"
                     class="project"
                     target="blank"
+                    data-type="Graphic design"
                 >
                     <img class="project__img" src="imgs/navbar.png" alt="project">
                     <div class="project__description">
@@ -251,6 +255,7 @@
                     href="#"
                     class="project"
                     target="blank"
+                    data-type="Illustrator"
                 >
                     <img class="project__img" src="imgs/navbar.png" alt="project">
                     <div class="project__description">
@@ -272,7 +277,7 @@
                     <img
                         src="imgs/people.jpg"
                         alt="people"
-                        class="testimonial__avarta"
+                        class="testimonial__avatar"
                     />
                     <div class="testimonial__speech-bubble">
                         <p>
@@ -297,7 +302,7 @@
                     <img
                         src="imgs/people.jpg"
                         alt="people"
-                        class="testimonial__avarta"
+                        class="testimonial__avatar"
                     />
                 </div>
         </div>
@@ -307,7 +312,7 @@
     <!--Contact-->
     <section id="contact" class="section">
         <h1 class="contact__title">Let's talk</h1>
-        <h2 class="contact__email">hyerim7312@mediaspine.co.kr</h2>
+        <h2 class="contact__email">hyerim7312@naver.com</h2>
         <div class="contact__links">
             <a href="https://www.instagram.com/v_victorim/?hl=ko" target="blank">
                 <i class="fab fa-instagram"></i>
@@ -316,7 +321,12 @@
                 <i class="fab fa-github"></i>
             </a>
         </div>
-        <p class="contact__rights">2022 Dream Coding Heim - All rights reserved</p>
+        <p class="contact__rights">2023 Victoria - All rights reserved</p>
     </section>
+
+    <!--Arrow up-->
+    <button class="arrow-up">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 </body>
 </html>
