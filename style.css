@@ -459,8 +459,10 @@ A. NO. 미디어쿼리에는 최소한의 것만 들어가야함*/
 /*for below 768px screen width*/
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {
-    display: block;
+    display: inline-block;
     color: white;
+    vertical-align: middle;
+    text-align:center;
   }
   #navbar {
     flex-direction: column;
