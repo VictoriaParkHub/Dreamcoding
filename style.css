@@ -460,6 +460,7 @@ A. NO. 미디어쿼리에는 최소한의 것만 들어가야함*/
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {
     display: block;
+    color: white;
   }
   #navbar {
     flex-direction: column;
@@ -498,6 +499,11 @@ A. NO. 미디어쿼리에는 최소한의 것만 들어가야함*/
   /*모두 div로 설정해서 flex-box를
   이용하니까 flex-direction:column;으로
   */
+
+  .category__btn {
+    width: 100%;
+    margin: 10px;
+  }
 
   .project {
     flex-grow: 1;
