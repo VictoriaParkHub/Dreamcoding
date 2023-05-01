@@ -472,7 +472,7 @@ A. NO. 미디어쿼리에는 최소한의 것만 들어가야함*/
   #navbar {
     flex-direction: column;
     align-items: flex-start;
-    background-color: var(--color-pink);
+    background-color: var(--color-blue);
   }
 
   #navbar.navbar--dark {
