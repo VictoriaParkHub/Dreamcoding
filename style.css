@@ -1,4 +1,9 @@
 /* Navbar */
+
+span{
+  display: block;
+}
+
 #navbar {
   position: fixed;
   width: 100%;
@@ -12,7 +17,7 @@
 }
 
 #navbar.navbar--dark{
-  background-color: var(--color-pink);
+  background-color: var(--color-blue);
   padding: 8px;
 }
 
@@ -44,7 +49,7 @@
 }
 
 .navbar__menu__item:hover {
-  background-color: var(--color-pink);
+  background-color: var(--color-blue);
   border: 2px solid var(--color-light-white);
 }
 
@@ -81,7 +86,7 @@
   color: var(--color-white);
 }
 
-.home__container h1, .home__container h2{
+.home__container h1, .home__container h2, .home__container p{
   color: var(--color-white);
 }
 
@@ -243,7 +248,7 @@
 
 .category__btn.selected,
 .category__btn:hover {
-  background-color: var(--color-pink);
+  background-color: var(--color-blue);
   color: var(--color-white);
 }
 
@@ -437,7 +442,7 @@
   font-size: 30px;
   padding: 10px;
   width: 50px;
-  background-color: var(--color-pink);
+  background-color: var(--color-light-grey);
   color: white;
   border-radius: 5px;
   opacity: 0;
